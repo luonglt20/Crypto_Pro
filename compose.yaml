@@ -1,0 +1,23 @@
+services:
+  keynonce-guard:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      KEYNONCE_DB_PATH: /app/data/keynonce_guard.db
+      AI_ENABLED: "false"
+    volumes:
+      - keynonce-data:/app/data
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 64
+    mem_limit: 512m
+
+volumes:
+  keynonce-data:
+

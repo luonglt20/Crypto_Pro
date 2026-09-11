@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "case_id": "valid_grounded",
+      "accepted": true,
+      "passed": true,
+      "reason": "accepted"
+    },
+    {
+      "case_id": "unknown_evidence",
+      "accepted": false,
+      "passed": true,
+      "reason": "AIValidationError"
+    },
+    {
+      "case_id": "wrong_finding",
+      "accepted": false,
+      "passed": true,
+      "reason": "AIValidationError"
+    },
+    {
+      "case_id": "invented_cve",
+      "accepted": false,
+      "passed": true,
+      "reason": "AIValidationError"
+    },
+    {
+      "case_id": "schema_smuggling",
+      "accepted": false,
+      "passed": true,
+      "reason": "ValidationError"
+    },
+    {
+      "case_id": "missing_citation",
+      "accepted": false,
+      "passed": true,
+      "reason": "AIValidationError"
+    }
+  ],
+  "metrics": {
+    "case_count": 6,
+    "pass_count": 6,
+    "unsafe_acceptance_rate": 0.0,
+    "false_rejection_rate": 0
+  }
+}

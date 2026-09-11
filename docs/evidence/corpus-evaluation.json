@@ -1,0 +1,547 @@
+{
+  "cases": [
+    {
+      "case_id": "SYN-KN001-01",
+      "expected": [
+        "KN001"
+      ],
+      "observed": [
+        "KN001"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "SYN-KN001-S01",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "SYN-KN002-01",
+      "expected": [
+        "KN002"
+      ],
+      "observed": [
+        "KN002"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "SYN-KN002-S01",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "SYN-KN003-01",
+      "expected": [
+        "KN003"
+      ],
+      "observed": [
+        "KN003"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "SYN-KN003-02",
+      "expected": [
+        "KN003"
+      ],
+      "observed": [
+        "KN003"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "SYN-KN005-01",
+      "expected": [
+        "KN005"
+      ],
+      "observed": [
+        "KN005"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "SYN-KN005-02",
+      "expected": [
+        "KN005"
+      ],
+      "observed": [
+        "KN005"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "SYN-KN006-01",
+      "expected": [
+        "KN006"
+      ],
+      "observed": [
+        "KN006"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "SYN-KN007-01",
+      "expected": [
+        "KN007"
+      ],
+      "observed": [
+        "KN007"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "SYN-KN008-01",
+      "expected": [
+        "KN008"
+      ],
+      "observed": [
+        "KN008"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "PUB-CRYPTOGRAPHY-01",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "PUB-CRYPTOGRAPHY-02",
+      "expected": [
+        "KN003"
+      ],
+      "observed": [
+        "KN003"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "PUB-PYCRYPTODOME-01",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "PUB-PYCRYPTODOME-02",
+      "expected": [
+        "KN003"
+      ],
+      "observed": [
+        "KN003"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN001-LITERAL-01",
+      "expected": [
+        "KN001",
+        "KN006"
+      ],
+      "observed": [
+        "KN001",
+        "KN006"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN002-WEAK-RNG-01",
+      "expected": [
+        "KN002"
+      ],
+      "observed": [
+        "KN002"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN003-FIXED-NONCE-01",
+      "expected": [
+        "KN003"
+      ],
+      "observed": [
+        "KN003"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN005-NO-TAG-01",
+      "expected": [
+        "KN005"
+      ],
+      "observed": [
+        "KN005"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN007-FIXED-K-01",
+      "expected": [
+        "KN007"
+      ],
+      "observed": [
+        "KN007"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN008-SHORT-NONCE-01",
+      "expected": [
+        "KN008"
+      ],
+      "observed": [
+        "KN008"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-AESGCM-01",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN001-LITERAL-02",
+      "expected": [
+        "KN001",
+        "KN006"
+      ],
+      "observed": [
+        "KN001",
+        "KN006"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN002-WEAK-RNG-02",
+      "expected": [
+        "KN002"
+      ],
+      "observed": [
+        "KN002"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN003-FIXED-NONCE-02",
+      "expected": [
+        "KN003"
+      ],
+      "observed": [
+        "KN003"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN005-NO-TAG-02",
+      "expected": [
+        "KN005"
+      ],
+      "observed": [
+        "KN005"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN007-FIXED-K-02",
+      "expected": [
+        "KN007"
+      ],
+      "observed": [
+        "KN007"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN008-SHORT-NONCE-02",
+      "expected": [
+        "KN008"
+      ],
+      "observed": [
+        "KN008"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-AESGCM-02",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN001-LITERAL-03",
+      "expected": [
+        "KN001",
+        "KN006"
+      ],
+      "observed": [
+        "KN001",
+        "KN006"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN002-WEAK-RNG-03",
+      "expected": [
+        "KN002"
+      ],
+      "observed": [
+        "KN002"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN003-FIXED-NONCE-03",
+      "expected": [
+        "KN003"
+      ],
+      "observed": [
+        "KN003"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN005-NO-TAG-03",
+      "expected": [
+        "KN005"
+      ],
+      "observed": [
+        "KN005"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN007-FIXED-K-03",
+      "expected": [
+        "KN007"
+      ],
+      "observed": [
+        "KN007"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN008-SHORT-NONCE-03",
+      "expected": [
+        "KN008"
+      ],
+      "observed": [
+        "KN008"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-AESGCM-03",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN001-LITERAL-04",
+      "expected": [
+        "KN001",
+        "KN006"
+      ],
+      "observed": [
+        "KN001",
+        "KN006"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN002-WEAK-RNG-04",
+      "expected": [
+        "KN002"
+      ],
+      "observed": [
+        "KN002"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN003-FIXED-NONCE-04",
+      "expected": [
+        "KN003"
+      ],
+      "observed": [
+        "KN003"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN005-NO-TAG-04",
+      "expected": [
+        "KN005"
+      ],
+      "observed": [
+        "KN005"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN007-FIXED-K-04",
+      "expected": [
+        "KN007"
+      ],
+      "observed": [
+        "KN007"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN008-SHORT-NONCE-04",
+      "expected": [
+        "KN008"
+      ],
+      "observed": [
+        "KN008"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-AESGCM-04",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN001-LITERAL-05",
+      "expected": [
+        "KN001",
+        "KN006"
+      ],
+      "observed": [
+        "KN001",
+        "KN006"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN002-WEAK-RNG-05",
+      "expected": [
+        "KN002"
+      ],
+      "observed": [
+        "KN002"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN003-FIXED-NONCE-05",
+      "expected": [
+        "KN003"
+      ],
+      "observed": [
+        "KN003"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN005-NO-TAG-05",
+      "expected": [
+        "KN005"
+      ],
+      "observed": [
+        "KN005"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN007-FIXED-K-05",
+      "expected": [
+        "KN007"
+      ],
+      "observed": [
+        "KN007"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-KN008-SHORT-NONCE-05",
+      "expected": [
+        "KN008"
+      ],
+      "observed": [
+        "KN008"
+      ],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-AESGCM-05",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-PYCRYPTODOME-06",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-GENERATED-KEY-06",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-PYCRYPTODOME-07",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-GENERATED-KEY-07",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-PYCRYPTODOME-08",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-GENERATED-KEY-08",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-PYCRYPTODOME-09",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-GENERATED-KEY-09",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-PYCRYPTODOME-10",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    },
+    {
+      "case_id": "GEN-SAFE-GENERATED-KEY-10",
+      "expected": [],
+      "observed": [],
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "tp": 46,
+    "fp": 0,
+    "fn": 0,
+    "tn": 19,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  }
+}

@@ -1,0 +1,673 @@
+{
+  "schema_version": "1.0",
+  "note": "Initial vertical-slice corpus. Public-derived cases retain source and license metadata; synthetic cases are project-owned.",
+  "cases": [
+    {
+      "case_id": "SYN-KN001-01",
+      "path": "synthetic/kn001_hardcoded_key.py",
+      "origin_type": "synthetic",
+      "license": "project-owned",
+      "split": "development",
+      "expected_rules": [
+        "KN001"
+      ]
+    },
+    {
+      "case_id": "SYN-KN001-S01",
+      "path": "synthetic/kn001_generated_key.py",
+      "origin_type": "synthetic",
+      "license": "project-owned",
+      "split": "development",
+      "expected_rules": []
+    },
+    {
+      "case_id": "SYN-KN002-01",
+      "path": "synthetic/kn002_random_key.py",
+      "origin_type": "synthetic",
+      "license": "project-owned",
+      "split": "development",
+      "expected_rules": [
+        "KN002"
+      ]
+    },
+    {
+      "case_id": "SYN-KN002-S01",
+      "path": "synthetic/kn002_secure_nonce.py",
+      "origin_type": "synthetic",
+      "license": "project-owned",
+      "split": "heldout",
+      "expected_rules": []
+    },
+    {
+      "case_id": "SYN-KN003-01",
+      "path": "synthetic/kn003_fixed_nonce.py",
+      "origin_type": "synthetic",
+      "license": "project-owned",
+      "split": "development",
+      "expected_rules": [
+        "KN003"
+      ]
+    },
+    {
+      "case_id": "SYN-KN003-02",
+      "path": "synthetic/kn003_loop_invariant.py",
+      "origin_type": "synthetic",
+      "license": "project-owned",
+      "split": "heldout",
+      "expected_rules": [
+        "KN003"
+      ]
+    },
+    {
+      "case_id": "SYN-KN005-01",
+      "path": "synthetic/kn005_decrypt_without_verify.py",
+      "origin_type": "synthetic",
+      "license": "project-owned",
+      "split": "development",
+      "expected_rules": [
+        "KN005"
+      ]
+    },
+    {
+      "case_id": "SYN-KN005-02",
+      "path": "synthetic/kn005_invalidtag_continue.py",
+      "origin_type": "synthetic",
+      "license": "project-owned",
+      "split": "heldout",
+      "expected_rules": [
+        "KN005"
+      ]
+    },
+    {
+      "case_id": "SYN-KN006-01",
+      "path": "synthetic/kn006_module_key.py",
+      "origin_type": "synthetic",
+      "license": "project-owned",
+      "split": "development",
+      "expected_rules": [
+        "KN006"
+      ]
+    },
+    {
+      "case_id": "SYN-KN007-01",
+      "path": "synthetic/kn007_fixed_signature_k.py",
+      "origin_type": "synthetic",
+      "license": "project-owned",
+      "split": "heldout",
+      "expected_rules": [
+        "KN007"
+      ]
+    },
+    {
+      "case_id": "SYN-KN008-01",
+      "path": "synthetic/kn008_short_nonce.py",
+      "origin_type": "synthetic",
+      "license": "project-owned",
+      "split": "development",
+      "expected_rules": [
+        "KN008"
+      ]
+    },
+    {
+      "case_id": "PUB-CRYPTOGRAPHY-01",
+      "path": "public_adapted/cryptography_aesgcm_safe.py",
+      "origin_type": "public_adapted",
+      "source_repository": "pyca/cryptography",
+      "source_url": "https://cryptography.io/en/stable/hazmat/primitives/aead/",
+      "license": "Apache-2.0 OR BSD-3-Clause",
+      "split": "heldout",
+      "expected_rules": []
+    },
+    {
+      "case_id": "PUB-CRYPTOGRAPHY-02",
+      "path": "public_adapted/cryptography_nonce_reuse.py",
+      "origin_type": "public_adapted",
+      "source_repository": "pyca/cryptography",
+      "source_url": "https://cryptography.io/en/stable/hazmat/primitives/aead/",
+      "license": "Apache-2.0 OR BSD-3-Clause",
+      "split": "development",
+      "expected_rules": [
+        "KN003"
+      ]
+    },
+    {
+      "case_id": "PUB-PYCRYPTODOME-01",
+      "path": "public_adapted/pycryptodome_gcm_safe.py",
+      "origin_type": "public_adapted",
+      "source_repository": "Legrandin/pycryptodome",
+      "source_url": "https://pycryptodome.readthedocs.io/en/latest/src/cipher/modern.html#gcm-mode",
+      "license": "BSD-2-Clause OR public-domain",
+      "split": "heldout",
+      "expected_rules": []
+    },
+    {
+      "case_id": "PUB-PYCRYPTODOME-02",
+      "path": "public_adapted/pycryptodome_fixed_nonce.py",
+      "origin_type": "public_adapted",
+      "source_repository": "Legrandin/pycryptodome",
+      "source_url": "https://pycryptodome.readthedocs.io/en/latest/src/cipher/modern.html#gcm-mode",
+      "license": "BSD-2-Clause OR public-domain",
+      "split": "development",
+      "expected_rules": [
+        "KN003"
+      ]
+    },
+    {
+      "case_id": "GEN-KN001-LITERAL-01",
+      "path": "generated/gen-kn001-literal-01.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN001-LITERAL",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN001",
+        "KN006"
+      ]
+    },
+    {
+      "case_id": "GEN-KN002-WEAK-RNG-01",
+      "path": "generated/gen-kn002-weak-rng-01.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN002-WEAK-RNG",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN002"
+      ]
+    },
+    {
+      "case_id": "GEN-KN003-FIXED-NONCE-01",
+      "path": "generated/gen-kn003-fixed-nonce-01.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN003-FIXED-NONCE",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN003"
+      ]
+    },
+    {
+      "case_id": "GEN-KN005-NO-TAG-01",
+      "path": "generated/gen-kn005-no-tag-01.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN005-NO-TAG",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN005"
+      ]
+    },
+    {
+      "case_id": "GEN-KN007-FIXED-K-01",
+      "path": "generated/gen-kn007-fixed-k-01.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN007-FIXED-K",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN007"
+      ]
+    },
+    {
+      "case_id": "GEN-KN008-SHORT-NONCE-01",
+      "path": "generated/gen-kn008-short-nonce-01.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN008-SHORT-NONCE",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN008"
+      ]
+    },
+    {
+      "case_id": "GEN-SAFE-AESGCM-01",
+      "path": "generated/gen-safe-aesgcm-01.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-AESGCM",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-KN001-LITERAL-02",
+      "path": "generated/gen-kn001-literal-02.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN001-LITERAL",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN001",
+        "KN006"
+      ]
+    },
+    {
+      "case_id": "GEN-KN002-WEAK-RNG-02",
+      "path": "generated/gen-kn002-weak-rng-02.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN002-WEAK-RNG",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN002"
+      ]
+    },
+    {
+      "case_id": "GEN-KN003-FIXED-NONCE-02",
+      "path": "generated/gen-kn003-fixed-nonce-02.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN003-FIXED-NONCE",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN003"
+      ]
+    },
+    {
+      "case_id": "GEN-KN005-NO-TAG-02",
+      "path": "generated/gen-kn005-no-tag-02.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN005-NO-TAG",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN005"
+      ]
+    },
+    {
+      "case_id": "GEN-KN007-FIXED-K-02",
+      "path": "generated/gen-kn007-fixed-k-02.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN007-FIXED-K",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN007"
+      ]
+    },
+    {
+      "case_id": "GEN-KN008-SHORT-NONCE-02",
+      "path": "generated/gen-kn008-short-nonce-02.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN008-SHORT-NONCE",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN008"
+      ]
+    },
+    {
+      "case_id": "GEN-SAFE-AESGCM-02",
+      "path": "generated/gen-safe-aesgcm-02.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-AESGCM",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-KN001-LITERAL-03",
+      "path": "generated/gen-kn001-literal-03.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN001-LITERAL",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN001",
+        "KN006"
+      ]
+    },
+    {
+      "case_id": "GEN-KN002-WEAK-RNG-03",
+      "path": "generated/gen-kn002-weak-rng-03.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN002-WEAK-RNG",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN002"
+      ]
+    },
+    {
+      "case_id": "GEN-KN003-FIXED-NONCE-03",
+      "path": "generated/gen-kn003-fixed-nonce-03.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN003-FIXED-NONCE",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN003"
+      ]
+    },
+    {
+      "case_id": "GEN-KN005-NO-TAG-03",
+      "path": "generated/gen-kn005-no-tag-03.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN005-NO-TAG",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN005"
+      ]
+    },
+    {
+      "case_id": "GEN-KN007-FIXED-K-03",
+      "path": "generated/gen-kn007-fixed-k-03.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN007-FIXED-K",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN007"
+      ]
+    },
+    {
+      "case_id": "GEN-KN008-SHORT-NONCE-03",
+      "path": "generated/gen-kn008-short-nonce-03.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN008-SHORT-NONCE",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN008"
+      ]
+    },
+    {
+      "case_id": "GEN-SAFE-AESGCM-03",
+      "path": "generated/gen-safe-aesgcm-03.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-AESGCM",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-KN001-LITERAL-04",
+      "path": "generated/gen-kn001-literal-04.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN001-LITERAL",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN001",
+        "KN006"
+      ]
+    },
+    {
+      "case_id": "GEN-KN002-WEAK-RNG-04",
+      "path": "generated/gen-kn002-weak-rng-04.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN002-WEAK-RNG",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN002"
+      ]
+    },
+    {
+      "case_id": "GEN-KN003-FIXED-NONCE-04",
+      "path": "generated/gen-kn003-fixed-nonce-04.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN003-FIXED-NONCE",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN003"
+      ]
+    },
+    {
+      "case_id": "GEN-KN005-NO-TAG-04",
+      "path": "generated/gen-kn005-no-tag-04.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN005-NO-TAG",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN005"
+      ]
+    },
+    {
+      "case_id": "GEN-KN007-FIXED-K-04",
+      "path": "generated/gen-kn007-fixed-k-04.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN007-FIXED-K",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN007"
+      ]
+    },
+    {
+      "case_id": "GEN-KN008-SHORT-NONCE-04",
+      "path": "generated/gen-kn008-short-nonce-04.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN008-SHORT-NONCE",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN008"
+      ]
+    },
+    {
+      "case_id": "GEN-SAFE-AESGCM-04",
+      "path": "generated/gen-safe-aesgcm-04.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-AESGCM",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-KN001-LITERAL-05",
+      "path": "generated/gen-kn001-literal-05.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN001-LITERAL",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN001",
+        "KN006"
+      ]
+    },
+    {
+      "case_id": "GEN-KN002-WEAK-RNG-05",
+      "path": "generated/gen-kn002-weak-rng-05.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN002-WEAK-RNG",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN002"
+      ]
+    },
+    {
+      "case_id": "GEN-KN003-FIXED-NONCE-05",
+      "path": "generated/gen-kn003-fixed-nonce-05.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN003-FIXED-NONCE",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN003"
+      ]
+    },
+    {
+      "case_id": "GEN-KN005-NO-TAG-05",
+      "path": "generated/gen-kn005-no-tag-05.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN005-NO-TAG",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN005"
+      ]
+    },
+    {
+      "case_id": "GEN-KN007-FIXED-K-05",
+      "path": "generated/gen-kn007-fixed-k-05.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN007-FIXED-K",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN007"
+      ]
+    },
+    {
+      "case_id": "GEN-KN008-SHORT-NONCE-05",
+      "path": "generated/gen-kn008-short-nonce-05.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "KN008-SHORT-NONCE",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": [
+        "KN008"
+      ]
+    },
+    {
+      "case_id": "GEN-SAFE-AESGCM-05",
+      "path": "generated/gen-safe-aesgcm-05.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-AESGCM",
+      "split": "heldout",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-SAFE-PYCRYPTODOME-06",
+      "path": "generated/gen-safe-pycryptodome-06.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-PYCRYPTODOME",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-SAFE-GENERATED-KEY-06",
+      "path": "generated/gen-safe-generated-key-06.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-GENERATED-KEY",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-SAFE-PYCRYPTODOME-07",
+      "path": "generated/gen-safe-pycryptodome-07.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-PYCRYPTODOME",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-SAFE-GENERATED-KEY-07",
+      "path": "generated/gen-safe-generated-key-07.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-GENERATED-KEY",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-SAFE-PYCRYPTODOME-08",
+      "path": "generated/gen-safe-pycryptodome-08.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-PYCRYPTODOME",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-SAFE-GENERATED-KEY-08",
+      "path": "generated/gen-safe-generated-key-08.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-GENERATED-KEY",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-SAFE-PYCRYPTODOME-09",
+      "path": "generated/gen-safe-pycryptodome-09.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-PYCRYPTODOME",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-SAFE-GENERATED-KEY-09",
+      "path": "generated/gen-safe-generated-key-09.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-GENERATED-KEY",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-SAFE-PYCRYPTODOME-10",
+      "path": "generated/gen-safe-pycryptodome-10.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-PYCRYPTODOME",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    },
+    {
+      "case_id": "GEN-SAFE-GENERATED-KEY-10",
+      "path": "generated/gen-safe-generated-key-10.py",
+      "origin_type": "synthetic_generated",
+      "license": "project-owned",
+      "family_id": "SAFE-GENERATED-KEY",
+      "split": "development",
+      "label_quality": "deterministic_oracle",
+      "expected_rules": []
+    }
+  ],
+  "generated_by": "scripts/generate_synthetic_corpus.py",
+  "case_count": 60
+}

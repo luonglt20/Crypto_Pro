@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "fixtures": [
+    {
+      "fixture_id": "nonce_reuse_aesgcm",
+      "handler": "nonce_reuse_aesgcm",
+      "rule_id": "KN004",
+      "confirmation_effect": "confirms_finding",
+      "origin_type": "synthetic",
+      "expected": "dynamic_confirmed"
+    },
+    {
+      "fixture_id": "aead_tag_tamper",
+      "handler": "aead_tag_tamper",
+      "rule_id": "KN005",
+      "confirmation_effect": "negative_control",
+      "origin_type": "synthetic",
+      "expected": "tamper_rejected"
+    },
+    {
+      "fixture_id": "counter_reset",
+      "handler": "counter_reset",
+      "rule_id": "KN004",
+      "confirmation_effect": "confirms_finding",
+      "origin_type": "synthetic",
+      "expected": "restart_duplicate"
+    }
+  ]
+}
