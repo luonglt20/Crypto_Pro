@@ -4,6 +4,13 @@ Quy ước trạng thái: `[x]` đã hoàn tất và có kiểm chứng; `[~]` �
 chứng; `[ ]` chưa thực hiện. Mọi tuyên bố “đạt” phải trỏ được tới test/evidence, không dựa vào
 đánh giá của LLM.
 
+## Đang làm tiếp
+
+- [ ] **P0-RPT-01 — Deterministic report export**: task mặc định cho session tiếp theo. Scope,
+  acceptance và non-goals được mô tả tại `Memory.md` mục `NEXT TASK`.
+
+Sau khi hoàn tất, cập nhật cả checkbox này và `Memory.md`; không tự chuyển sang ML/P2.
+
 ## Đã hoàn tất
 
 - [x] FastAPI + Jinja2 web app và OpenAPI.
@@ -29,7 +36,8 @@ chứng; `[ ]` chưa thực hiện. Mọi tuyên bố “đạt” phải trỏ 
 - [ ] Bổ sung blind review cho nhãn held-out; reviewer không xem output rule trước khi gán nhãn.
 - [ ] Thêm repository-level benchmark trên 3–5 dự án Python được phép dùng.
 - [ ] Thêm test matrix đầy đủ cho KN004/KN006 và cross-file/interprocedural edge cases.
-- [ ] Xuất report JSON + HTML/PDF gồm config hash, corpus hash, tool version và run ID.
+- [ ] Xuất report JSON + HTML/PDF gồm config hash, corpus hash, tool version và run ID
+  (`P0-RPT-01`).
 - [ ] Chạy AI harness với provider thật trên golden set; đo groundedness, latency, token/cost và
   fallback rate. Không gửi secret/source thô.
 - [ ] Hoàn thiện traceability matrix Threat → SR → CR → Tool/Test → Evidence → Result → Residual
@@ -59,4 +67,3 @@ chứng; `[ ]` chưa thực hiện. Mọi tuyên bố “đạt” phải trỏ 
 - Không tự khai thác, rotate/revoke key hay thay đổi production.
 - Không multi-agent swarm và không fine-tune LLM khi chưa có dataset gán nhãn đủ lớn.
 - Không tuyên bố “secure” chỉ vì scanner không tìm thấy finding.
-
