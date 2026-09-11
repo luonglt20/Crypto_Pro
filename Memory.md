@@ -32,6 +32,8 @@ Làm đúng thứ tự sau trước khi sửa code:
 
 ## 3. NEXT TASK — task mặc định cho session kế tiếp
 
+<!-- CURRENT_TASK_ID: P0-RPT-01 -->
+
 ### P0-RPT-01: Deterministic report export
 
 Mục tiêu: xuất một report tái lập từ scan/evidence, không dùng LLM làm nguồn dữ liệu.
@@ -64,6 +66,8 @@ Không làm trong task này: gọi AI provider thật, ML, CVE lookup, chạy co
 
 - Đưa prototype, corpus, tests và tài liệu lên GitHub `main`.
 - Thêm `TASK.md`, `Memory.md`, `Architech.md`, `Target.md`, `Context.md`.
+- Audit đường vào cho session mới: README trỏ thẳng tới handoff, `AGENTS.md` áp dụng contract cho
+  toàn repo và regression test khóa sự đồng bộ của task ID.
 - Upload proposal DOCX/PDF, course guideline, revised topic requirements và evidence JSON vào
   `docs/`.
 - Secret scan trước commit không phát hiện GitHub/OpenAI token, private key hoặc API key thật.
@@ -81,7 +85,7 @@ Không làm trong task này: gọi AI provider thật, ML, CVE lookup, chạy co
 
 | Gate | Observed result | Status |
 |---|---|---|
-| Unit/integration tests | 27 passed | verified |
+| Unit/integration + handoff contract tests | 30 passed | verified |
 | Ruff | `src`, `tests`, `scripts` passed | verified |
 | Corpus evaluator | 60 cases; TP=46, FP=0, FN=0, TN=19 | verified on controlled corpus only |
 | AI contract harness | 6/6; unsafe acceptance rate 0 | verified on defined cases only |
@@ -152,8 +156,8 @@ Trước khi bàn giao session:
 
 1. Cập nhật checkbox và evidence của task trong `TASK.md`.
 2. Đổi `NEXT TASK` thành task cụ thể tiếp theo, có scope và acceptance rõ.
+   Đồng thời cập nhật marker `CURRENT_TASK_ID` và entry tương ứng trong README/TASK.
 3. Ghi công việc vừa hoàn tất vào `Last completed work`, kèm ngày/commit nếu đã push.
 4. Cập nhật bảng `Verified state` bằng kết quả thực chạy; không copy số cũ nếu chưa chạy lại.
 5. Ghi blocker mới và external input cần thiết.
 6. Secret scan staged files, kiểm tra `git diff --check`, test/lint, rồi mới commit/push.
-
